@@ -31,7 +31,7 @@ This project demonstrates how to set up monitoring for a Flask web application u
 5. Generate a unique hex key: `openssl rand --hex 32`
 6. Copy and paste the hex key into the .env file for PROMETHEUS_HEX
 7. Install the requirements: `pip install -r requirements.txt`
-8. Run the Docker Compose setup: `docker-compose up -d --build`
+8. Run the Docker Compose setup: `docker compose up -d --build`
 9. Access Prometheus at `http://localhost:9090`
 10. Access Grafana at `http://localhost:3000`
     1. Default credentials: admin / password.
