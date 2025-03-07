@@ -32,6 +32,8 @@ services:
   flask-app:
     build: .
     container_name: flask-app
+#    volumes:
+#      - ./:/app
     ports:
       - "5001:5001"  # Expose Flask app on port 5001
     environment:
@@ -40,3 +42,5 @@ services:
 
 volumes:
   grafana-storage:
+
+# NOTE: uncomment the volumes part if you want the code change to directly reflect
