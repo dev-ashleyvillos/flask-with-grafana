@@ -27,13 +27,16 @@ This project demonstrates how to set up monitoring for a Flask web application u
 1. Clone this repository and `cd` into the folder
 2. Create a virtual environment: `python -m virtualenv venv`
 3. Activate virtual environment: `source venv/bin/activate`
-4. Install the requirements: `pip install -r requirements.txt`
-5. Run the Docker Compose setup: `docker-compose up -d --build`
-6. Access Prometheus at `http://localhost:9090`
-7. Access Grafana at `http://localhost:3000` 
-   1. Default credentials: admin / password. 
-   2. Modify grafana.ini if you want to change the password.
-8. Access the Flask application at `http://localhost:5001`
+4. Create a .env file: `cp .env.example .env`
+5. Generate a unique hex key: `openssl rand --hex 32`
+6. Copy and paste the hex key into the .env file for PROMETHEUS_HEX
+7. Install the requirements: `pip install -r requirements.txt`
+8. Run the Docker Compose setup: `docker-compose up -d --build`
+9. Access Prometheus at `http://localhost:9090`
+10. Access Grafana at `http://localhost:3000`
+    1. Default credentials: admin / password.
+    2. Modify grafana.ini if you want to change the password.
+11. Access the Flask application at `http://localhost:5001`
 
 ## Requirements
 - Docker and Docker Compose
